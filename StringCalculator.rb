@@ -1,6 +1,10 @@
 class SimpleCalculator
   def add(number_string)
 
+  if number_string.empty?
+      return 0
+  end
+    
    separator = ","
 
     number_string = number_string.gsub("\n", separator) # Replace newlines with the separator
