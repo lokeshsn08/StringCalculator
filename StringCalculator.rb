@@ -6,7 +6,11 @@ class SimpleCalculator
   end
     
    separator = ","
-
+    if number_string.start_with?("//")
+      separator = number_string[2]  
+      number_string = number_string.split("\n")[1]
+    end
+    
     number_string = number_string.gsub("\n", separator) # Replace newlines with the separator
     number_list = number_string.split(separator)
     
