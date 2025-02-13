@@ -25,6 +25,11 @@ class SimpleCalculator
         total_sum += number
       end
     end
+    
+    if negative_numbers.any?
+      raise "negative numbers not allowed #{negative_numbers.join(',')}"
+    end
+    
     return total_sum
   end
 end
